@@ -1,0 +1,45 @@
+/* Jumbotron images */
+#item1{
+    background-image: url(../../images/cpr_1.jpg);
+  }
+
+  #item2{
+    background-image: url(../../images/cpr_2.jpg);
+  }
+
+  #item4{
+    background-image: url(../../images/cpr_4.jpg);
+  }
+
+  #item5{
+    background-image: url(../../images/cpr_5.jpg);
+  }
+
+
+/* 
+  Classes form */
+  #classesForm {
+    margin: 5px;
+   
+  }
+  
+  #classesForm input {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    
+  }
+  
+  #classesForm textarea {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    
+  }
+
+  #classesFormButton {
+    display: block;
+ 
+  }

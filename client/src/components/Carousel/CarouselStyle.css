@@ -1,0 +1,29 @@
+#item1 {
+    /* background-image: url(../../images/cpr_1.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+
+  #item2 {
+    /* background-image: url(../../images/cpr_2.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+
+  #item3 {
+    background-image: url(../../images/cpr_3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+  }
+
+  .imgWidth {
+      min-width: 100%;
+      height: 30rem;
+  }
+
+  .shadow  {
+      text-shadow: 2px 2px 6px rgb(63, 63, 63) !important;
+  }

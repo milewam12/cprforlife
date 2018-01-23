@@ -1,0 +1,25 @@
+#footerForm {
+    margin: 5px;
+   
+  }
+  
+  #footerForm input {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    
+  }
+  
+  #footerForm textarea {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    
+  }
+
+  #footerFormButton {
+    display: block;
+ 
+  }

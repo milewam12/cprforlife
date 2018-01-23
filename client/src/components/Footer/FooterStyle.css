@@ -1,0 +1,26 @@
+.cprFooter {
+    /* position: fixed; */
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   clear: both;
+   background-color: gainsboro;
+   padding-top: 30px;
+
+   margin-top: 50px;
+
+}
+
+.footer-copyright {
+    background-color: #292b2c;
+    text-align: center;
+    padding: 10px 0px;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-copyright a {
+    color: lightgray;
+    text-decoration: none;
+
+}

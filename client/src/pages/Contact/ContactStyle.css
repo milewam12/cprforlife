@@ -1,0 +1,35 @@
+#contactImage{
+    background-image: url(../../images/cpr_5.jpg);
+    margin-top: 150px;
+    height: 180px;
+  }
+/* .jumbotron jumbotron-fluid3 {
+  padding-top: 140px;
+} */
+
+#contactForm {
+  margin-top: 20px;
+  
+ 
+}
+
+#contactForm input {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  
+}
+
+#contactForm textarea {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  
+}
+
+#contactFormButton {
+  display: block;
+
+}
