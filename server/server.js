@@ -5,8 +5,6 @@ var mongoose = require("mongoose");
 var Model = require("./models");
 var path = require('path');
 
-// var logger = require("morgan");
-// var mongoose = require("mongoose");
 
 // Create Instance of Express
 var app = express();
@@ -52,8 +50,6 @@ db.once("open", function() {
 });
 
 
-
-
 //setting the route path & initialize the API for CPR Classes
 app.get('/api/event', function(req, res) {
   Model.Contactfooterv.find({})
@@ -69,9 +65,6 @@ app.get('/api/event', function(req, res) {
   
 });
 
-
-
-// })
 
 //setting the route path & initialize the API for REGISTRATION form
 
@@ -94,8 +87,6 @@ app.post('/api/event', function (req, res) {
   })
   
 });
-
-
 
 
 
@@ -141,7 +132,7 @@ app.get("/", function (req, res) {
 // Any non API GET routes will be directed to our React App and handled by React Router
 app.get("*", function(req, res) {
   if ( process.env.NODE_ENV === 'production' ) {
-    res.sendFile(__dirname + "/client/build/../dist/index.html");
+    res.sendFile(__dirname + "/client/build/index.html");
   } else {
     res.sendFile(path.resolve(__dirname + "/client/public/../dist/index.html"));
   }
