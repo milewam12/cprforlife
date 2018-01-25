@@ -3,6 +3,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var Model = require("./models");
+var path = require('path');
 
 // var logger = require("morgan");
 // var mongoose = require("mongoose");
@@ -142,7 +143,7 @@ app.get("*", function(req, res) {
   if ( process.env.NODE_ENV === 'production' ) {
     res.sendFile(__dirname + "/client/build/../dist/index.html");
   } else {
-    res.sendFile(__dirname + "/client/public/../dist/index.html");
+    res.sendFile(path.resolve(__dirname + "/client/public/../dist/index.html"));
   }
 });
 
