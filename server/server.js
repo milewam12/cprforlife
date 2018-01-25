@@ -24,14 +24,15 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Enable CORS so that browsers don't block requests.
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
-  next();
-});
-// Serve files created by create-react-app.
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+//   next();
+// });
+// // Serve files created by create-react-app.
 app.use(express.static("client/build"));
+
 
 
 // db config
@@ -67,41 +68,8 @@ app.get('/api/event', function(req, res) {
   
 });
 
-// app.post('/api/event', function (req, res, next) {
-//   console.log(req.body);
-//   console.log(req.body.name);
-//   console.log(typeof req.body);
-  
-// // req.body = JSON.stringify(req.body)
-// const newEvent = new Model.Event({
-//   name: req.body.name,
-//   email: req.body.email
-// });
-// .save()
-// .then(result => {
-//   console.log(result)
-// })
-// .catch(err => console.log(err));
-// .res.status(201).json({
-//   message: "Hanling POTS req",
-// registration: newEvent
-// })
-  
-// });
 
 
-// app.get('/api/event/:id', function (req, res) {
-//   var id = req.params.id
-//   Model.Event.findById(id)
-
-//   .exec(function (err, doc) {
-//     if (err) {
-//       console.log(err);
-//     }else {
-//       res.send(doc)
-//     }
-    
-//   })
 // })
 
 //setting the route path & initialize the API for REGISTRATION form
@@ -128,21 +96,6 @@ app.post('/api/event', function (req, res) {
 
 
 
-
-//setting the route path to save to the API for REGISTRATION form
-// app.post('/api/register', function (req, res) {
-//   var newRegistration = new Model.Registration(req.body);
-
-//   newRegistration.save(function (err, doc) {
-//     if (err) {
-//       console.log(err);
-//     }else {
-//       res.send(doc)
-//     }
-    
-//   });
-  
-// });
 
 
 //setting the route path & initialize the API for CONTACT FOOTER form
@@ -183,14 +136,16 @@ app.get("/", function (req, res) {
 
 
 
+
 // Any non API GET routes will be directed to our React App and handled by React Router
 app.get("*", function(req, res) {
   if ( process.env.NODE_ENV === 'production' ) {
-    res.sendFile(__dirname + "/client/build/index.html");
+    res.sendFile(__dirname + "/client/build/../dist/index.html");
   } else {
-    res.sendFile(__dirname + "/client/public/index.html");
+    res.sendFile(__dirname + "/client/public/../dist/index.html");
   }
 });
+
 
 
 // -------------------------------------------------
