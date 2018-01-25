@@ -11,8 +11,15 @@ class Nav extends Component {
       <div className=" fixed-top">
             <nav className="navbar navbar-light bg-light  ">
                 <div className="container">
-                    <span className="small">Same day CPR certification PRIVATE CLASSES | 407 .000.000 | info@email.com </span>
-                    <Button bsStyle="danger"> BOOK NOW</Button>
+               
+                <div className="col-lg-10">
+                <span className="small">Same day CPR certification PRIVATE CLASSES | 407 .000.000 | info@email.com </span>
+                </div>
+
+                <div className="col-lg-2" >
+                <Button  id="topbtn"  href="/classes/cprandfirstaid"> BOOK NOW</Button>
+     
+                </div>
 
                 </div>
             </nav>
@@ -35,9 +42,9 @@ class Nav extends Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/classes/groupcprclasses" >Group CPR Classes </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/about">About </Link>
-              </li>
+              </li> */}
               {/* <li className="nav-item">
                 <Link className="nav-link" to="/howitworks">How it works</Link>
               </li> */}

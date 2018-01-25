@@ -33,7 +33,7 @@ class WhyCpr extends Component {
             <div>
                 <Jumbotron
                     title="Learn CPR. Save Lives!"
-                    subtitle="Text of the printing and typesetting industry"
+                    subtitle="For Every minute that an AED is unavailable, the victim has a 10% less chance of survival"
                     id="item3"
 
                 />
@@ -44,7 +44,7 @@ class WhyCpr extends Component {
                             <div>
                             <h3> Top 3 Reasons to Get CPR Training Now </h3>
                                 <p>
-                                    Some people think that performing CPR is a job for for paramedics or medical professionals. Others believe CPR is only for those with years of training and extensive experience in medicine. At <a href="/">CPR for Life Orlando</a>, we believe that CPR training is for everyone. We have seen how CPR saves lives and keeps families from being turn apart by loss.
+                                    Some people think that performing CPR is a job for for paramedics or medical professionals. Others believe CPR is only for those with years of training and extensive experience in medicine. At <strong> <a href="/classes/cprandfirstaid">CPR for Life Orlando</a></strong>, we believe that CPR training is for everyone. We have seen how CPR saves lives and keeps families from being turn apart by loss.
                 </p>
                                 <h5>CPR Is Easy to Learn</h5>
                                 <p>

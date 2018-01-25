@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 // import { Button } from "react-bootstrap";
 import "./Style.css";
-import cprCard from "../../images/cprCard.jpg";
-import FirstAid from "../../images/firstaidCard.jpg";
+import cprCard from "../../images/cprCard.png";
+import FirstAid from "../../images/firstaidCard.png";
 import helpers from "../../utils/helpers";
 
 
@@ -51,18 +51,24 @@ class EventsForm extends Component {
                 eventId: this.state.eventId
 
             })
-                .catch(err => console.log(err));
+            .then(response => {
+                console.log(response);
+                this.setState({
+                    name: "",
+                    email: "",
+                    address: "",
+                    telephone: "",
+                    city: "",
+                    state: ""
+
+                });
+
+                this.props.formSubmit();
+            })
+            .catch(err => console.log(err));
         }
 
-        this.setState({
-            name: "",
-            email: "",
-            address: "",
-            telephone: "",
-            city: "",
-            state: ""
-
-        })
+     
     }
 
 
@@ -96,44 +102,8 @@ class EventsForm extends Component {
         }
     }
 
-    handleClick = () =>{
-        window.location.assign("https://www.w3schools.com")
-   
-      
-    }
 
-    // onClick={window.location.reload()}
 
-    handleModal = event => {
-        if (this.state.email && this.state.telephone && this.state.name) {
-            return (
-                <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog" role="document">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel">{this.state.name}</h5>
-                                
-                                <button  type="button" className="close" data-dismiss="modal" aria-label="Close"  >
-                                    <span aria-hidden="true">&times;</span>
-                                 
-                                </button>
-
-                               
-                            </div>
-                            <div className="modal-body">
-                                <p> Many thanks for your message. We will be in touch within 24 hours. Meanwhile learn more about <a href="/whycpr"> why is so important to learn CPR</a></p>
-                            </div>
-                            <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary"  data-dismiss="modal" onClick={this.handleClick}>Close</button>
-                                {/* {this.handleClick} */}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )
-        }
-
-    }
 
 
 
@@ -142,24 +112,30 @@ class EventsForm extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-5">
-
+                    <div className=" col-lg-5 lead cardcp">
+                    <br />
+                    <h1 className="lead">You have selected: </h1>
                         {this.props.selectedEvent && (
-                            <h1> {this.props.selectedEvent.title}</h1>
+                            <h3> {this.props.selectedEvent.title} Certification</h3>
                         )}
-                        <h3> Certification</h3>
+                     
                         {this.handleCardCpr()}
                         {this.handleCardFirst()}
-                        <h4> <br />Hour: {this.props.selectedEvent.time}</h4>
-                        <h4>Date: January {this.props.selectedEvent.startDate.getDate()}, 2018 </h4>
-                        <h4> Price per person: {this.props.selectedEvent.cost}</h4>
+                        <ul>
+                            <li>Hour: {this.props.selectedEvent.time} </li>
+                            <li> Date: January {this.props.selectedEvent.startDate.getDate()}, 2018</li>
+                            <li>Price per person: {this.props.selectedEvent.cost} </li>
+
+                        </ul>
+               
                     </div>
 
-                    <div className="col-lg-7">
-                        <h3>Please fill up the form to complete your registration</h3>
+                    <div className="col-lg-7 ">
+                        <h2>Please fill up the form to complete your registration</h2>
                         <form className="form" id="classesForm">
                             <label htmlFor="exampleFormControlSelect1">Name</label>
                             <input
+                            className="form-control"
                                 value={this.state.name}
                                 name="name"
                                 onChange={this.handleInputChange}
@@ -171,6 +147,7 @@ class EventsForm extends Component {
 
                             <label htmlFor="inputAddress">Address</label>
                             <input
+                            className="form-control"
                                 value={this.state.address}
                                 onChange={this.handleInputChange}
                                 name="address"
@@ -179,10 +156,9 @@ class EventsForm extends Component {
                                 placeholder="1234 Main St"
                                 required />
 
-
                             <label htmlFor="inputCity">City</label>
                             <input
-
+                            className="form-control"
                                 value={this.state.city}
                                 onChange={this.handleInputChange}
                                 name="city"
@@ -199,6 +175,7 @@ class EventsForm extends Component {
 
                             <label htmlFor="exampleFormControlInput1">Email address:</label>
                             <input
+                            className="form-control"
                                 value={this.state.email}
                                 name="email"
                                 onChange={this.handleInputChange}
@@ -209,6 +186,7 @@ class EventsForm extends Component {
 
                             <label htmlFor="exampleFormControlSelect1">Telephone:</label>
                             <input
+                            className="form-control"
                                 value={this.state.telephone}
                                 name="telephone"
                                 onChange={this.handleInputChange}
@@ -220,7 +198,7 @@ class EventsForm extends Component {
                                 <button type="button" id="footerFormButton" className="btn btn-danger small" data-toggle="modal" data-target="#exampleModal"
                                     onClick={this.handleFormSubmit}
                                 >Submit</button>
-                                {this.handleModal()}
+                                {/* {this.handleModal()} */}
                             </div>
                         </form>
 

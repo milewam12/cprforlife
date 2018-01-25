@@ -1,43 +1,12 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron/Jumbotron";
 import "./ContactStyle.css";
-import {Button} from "react-bootstrap";
-import Map from "./Map";
+
+import FooterForm from "../../components/Footer/FooterForm";
 
 
 
 class Contact extends Component {
-
-    state = {
-        name: "",
-        email: "",
-        comments: ""
-    };
-    
-
-    handleInputChange = event => {
-        let value = event.target.value;
-        const name = event.target.name;
-
-        this.setState({
-            [name]: value
-        });
-    };
-
-    handleFormSubmit = event => {
-        event.preventDefault();
-        if (!this.state.email || !this.state.comments) {
-            alert("Please provide your email and comments");
-        } else {
-            alert(`Modal goes here. Thank you ${this.state.name} we will be in touch within 48 hours`)
-        }
-
-        this.setState({
-            name: "",
-            email: "",
-            comments: ""
-        })
-    }
 
 
     render(){
@@ -49,41 +18,18 @@ class Contact extends Component {
             />
 
             <div className="row">
-            <div className="col-lg-7">
+        <div className="col-lg-7">
 
-            <form className="form" id="contactForm">
-                    <input
-                        value={this.state.name}
-                        name="name"
-                        onChange={this.handleInputChange}
-                        type="text"
-                        placeholder="Name"
-                    />
+        <FooterForm />
 
-                    <input
-                        value={this.state.email}
-                        name="email"
-                        onChange={this.handleInputChange}
-                        type="text"
-                        placeholder="E-mail"
-                    />
-
-                    <textarea 
-                      value={this.state.comments}
-                      name="comments"
-                      onChange={this.handleInputChange}
-                      type="text"
-                      placeholder="Comments"
-                    
-                    />
-
-                    <Button  bsSize="large" id="contactFormButton"  bsStyle="danger"  onClick={this.handleFormSubmit}>Submit</Button>
-                </form>
 
             </div>
             <div className="col-lg-5">
-            <h6>Serving the ONLY Orlando area! </h6>
-            <Map />
+            <h3>Serving the ONLY Orlando area! </h3>
+            <p>We aim to reach out to individuals, health care professionals, and school districts throughout the Orlando Area. We want our community footprint to be one of positive change and embetterment. We strive to be that difference in the number of lives that get saved everyday.</p>
+            <h4>Call Us: 407.000.00 </h4>
+
+       
             </div>
 
             </div>

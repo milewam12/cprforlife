@@ -22,7 +22,7 @@ class Carousel extends Component {
                                 <div className="shadow">
                                     {/* <Link to="/classes/cpr"><h3>Same Day CPR Certification</h3></Link> */}
                                     <h3>Same Day CPR Certification</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                    <p>100% Official American Heart Association Certified BLS CPR Classes</p>
                                 </div>
 
                             </div>
@@ -39,7 +39,7 @@ class Carousel extends Component {
                             <div className="carousel-caption d-none d-md-block">
                                 <div className="shadow">
                                     <h3>CPR & First Aid Certification</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                    <p>American Heart Association BLS CPR Health Care Provider</p>
                                 </div>
 
                             </div>
@@ -52,7 +52,7 @@ class Carousel extends Component {
                             <div className="carousel-caption d-none d-md-block">
                                 <div className="shadow">
                                     <h3>Why is important to learn CPR?</h3>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                    <p>Learning CPR can save lives</p>
                                 </div>
 
                             </div>

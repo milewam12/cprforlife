@@ -27,8 +27,8 @@ class CprAndFirstAid extends Component {
         );
     };
 
-    handleFormSubmit = event =>{
-        this.setState({ formSubmit: true});
+    handleFormSubmit = event => {
+        this.setState({ formSubmit: true });
 
     }
 
@@ -36,17 +36,17 @@ class CprAndFirstAid extends Component {
     render() {
 
         return (
-            
+
             <div>
                 <Jumbotron
-                    title="CPR and First Aid Certification"
-                    subtitle="Text of the printing and typesetting industry"
+                    title="Class Registration"
+                    subtitle="CPR and First Aid Certification"
                     id="item4"
                 />
                 <div className="container" >
                     <div className="row">
                         <div className="col-lg-12">
-            
+
                         </div>
                     </div>
                     <div className="row">
@@ -54,33 +54,36 @@ class CprAndFirstAid extends Component {
 
 
                             {this.state.eventSelected ? (
-                                <Eventsform
-                                    selectedEvent={this.state.selectedEvent}
+                                (this.state.formSubmit ? (
+                                    <ConfirmationMessage
 
-                                    
-                                >
-                                    <h1>
-                                        {this.state.eventSelected.image}
-                                    </h1>
-                                </Eventsform>
+                                    />
+
+                                ) : (
+                                        <Eventsform
+                                            selectedEvent={this.state.selectedEvent}
+                                            formSubmit={this.handleFormSubmit}
+
+                                        >
+                                            <h1>
+                                                {this.state.eventSelected.image}
+                                            </h1>
+                                        </Eventsform>
+                                    )
+                                )
                             ) : (
                                     <div>
-                                    <Text />
-                                    <Calendar
-                                        handleEventSelect={this.handleEventSelect}
-                                    /> 
+                                         <Text />
+                                     
+                                           <Calendar
+                                            handleEventSelect={this.handleEventSelect}
+                                        />
+                                       
 
                                     </div>
-                                ) }
-                               
-                               {this.state.formSubmit ? ( 
-                                   <ConfirmationMessage
-                                   formSubmit={this.handleFormSubmit}
-                                   />
-                                   
-                               ) :(
-                                   <Eventsform />
-                               )}
+                                )}
+
+
 
                         </div>
 

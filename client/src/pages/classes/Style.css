@@ -43,3 +43,19 @@
     display: block;
  
   }
+
+  #thanks{
+    color: #0079c2;
+    margin-bottom: 47px;
+  }
+
+  .sel{
+    color: #da3849;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+  .cardcp{
+    background-color: rgb(240, 240, 240);
+  }
+
+ 

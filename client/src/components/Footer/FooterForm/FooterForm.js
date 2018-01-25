@@ -73,6 +73,7 @@ class FooterForm extends Component {
             <div>
                 <form className="form" id="footerForm">
                     <input
+                     className="form-control"
                         value={this.state.name}
                         name="name"
                         onChange={this.handleInputChange}
@@ -81,6 +82,7 @@ class FooterForm extends Component {
                     />
 
                     <input
+                     className="form-control"
                         value={this.state.email}
                         name="email"
                         onChange={this.handleInputChange}
@@ -89,6 +91,7 @@ class FooterForm extends Component {
                     />
 
                     <textarea
+                     className="form-control"
                         value={this.state.comments}
                         name="comments"
                         onChange={this.handleInputChange}

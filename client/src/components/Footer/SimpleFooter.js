@@ -7,7 +7,8 @@ const SimpleFooter = () => {
            <footer>
            <div className="footer-copyright">
                         <div className="container-fluid">
-                        © CPR for Life Orlando {new Date().getFullYear()} | All rights reserved by <a href="http://mgfactor.com/" > MG Factor</a> 
+                        <span>
+                        © CPR for Life Orlando {new Date().getFullYear()} |  <a href="https://github.com/milewam12" > Proudly built with React</a></span> 
                         </div>
                     </div>
                 </footer>
