@@ -5,13 +5,15 @@ import Calendar from "../../components/Calendar";
 import Eventsform from "./Eventsform";
 import Events from "../../components/Calendar/Events";
 import Text from "./Text"
+import ConfirmationMessage from "./ConfirmationMessage";
 
 
 class CprAndFirstAid extends Component {
     state = {
         eventSelected: false,
         Events,
-        selectedEvent: null
+        selectedEvent: null,
+        formSubmit: false
 
     };
 
@@ -25,6 +27,10 @@ class CprAndFirstAid extends Component {
         );
     };
 
+    handleFormSubmit = event =>{
+        this.setState({ formSubmit: true});
+
+    }
 
 
     render() {
@@ -50,6 +56,8 @@ class CprAndFirstAid extends Component {
                             {this.state.eventSelected ? (
                                 <Eventsform
                                     selectedEvent={this.state.selectedEvent}
+
+                                    
                                 >
                                     <h1>
                                         {this.state.eventSelected.image}
@@ -65,6 +73,14 @@ class CprAndFirstAid extends Component {
                                     </div>
                                 ) }
                                
+                               {this.state.formSubmit ? ( 
+                                   <ConfirmationMessage
+                                   formSubmit={this.handleFormSubmit}
+                                   />
+                                   
+                               ) :(
+                                   <Eventsform />
+                               )}
 
                         </div>
 
