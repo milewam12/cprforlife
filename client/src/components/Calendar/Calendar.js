@@ -7,6 +7,18 @@ import Events from "./Events"
 
 BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
 
+// let formats = {
+//   dateFormat: 'dd',
+
+//   dayFormat: (date, culture, localizer) =>
+//     localizer.format(date, 'DDD', culture),
+
+//   dayRangeHeaderFormat: ({ start, end }, culture, local) =>
+//     local.format(start, { date: 'short' }, culture) + ' — ' +
+//     local.format(end, { date: 'short' }, culture)
+// }
+
+
 const Calendar = props => (
 
   <div className="container"  {...this.props}>
@@ -16,6 +28,7 @@ const Calendar = props => (
 
     <BigCalendar
       selectable
+      // formats={formats}
       events={Events}
       startAccessor='startDate'
       endAccessor='endDate'
@@ -31,6 +44,12 @@ const Calendar = props => (
       // }
 
       onSelectEvent={(event) => props.handleEventSelect(event)}
+
+      onView={(view) => {
+        console.log('#### onView');
+        console.log('#### view=', view);
+
+      }}
 
       // onSelectEvent={props.handleEventSelect }
     />

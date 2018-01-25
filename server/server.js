@@ -104,9 +104,14 @@ app.get('/api/event', function(req, res) {
 //   })
 // })
 
+//setting the route path & initialize the API for REGISTRATION form
+
 app.post('/api/event', function (req, res) {
   console.log(req.body);
   console.log(req.body.name);
+  console.log(req.body.telephone);
+  console.log(req.body.city);
+  console.log(req.body.eventId);
   console.log(typeof req.body);
   var newRegister = new Model.Registration(req.body);
 
@@ -115,12 +120,13 @@ app.post('/api/event', function (req, res) {
       console.log(err);
     }else{
       res.send(doc)
+      // res.redirect("/")
     }
-  });
+  })
   
 });
 
-//setting the route path & initialize the API for REGISTRATION form
+
 
 
 //setting the route path to save to the API for REGISTRATION form

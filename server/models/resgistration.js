@@ -6,7 +6,6 @@ const registrationSchema = new Schema ({
     name : { type:String},
     email : { type:String},
     address : { type:String},
-    address2 : { type:String},
     telephone : { type:Number},
     city:{ type:String},
     state: { type:String},

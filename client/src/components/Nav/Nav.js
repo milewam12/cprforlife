@@ -16,29 +16,24 @@ class Nav extends Component {
 
                 </div>
             </nav>
+           
 
 
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
-          {/* <Link className="navbar-brand" to="/">CPR for life Orlando</Link> */}
+
+        <a className="navbar-brand" href="/">
+    <img src={logo} alt="CPR for life Orlando brand" width="300" height="60" />
+  </a>
        
-          
-          <img  src={logo} alt="CPR for life Orlando brand"/> 
-      
-      
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
 
           <div className="collapse navbar-collapse" id="navbarsExample07">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item dropdown">
-                <Link className="nav-link dropdown-toggle" to="/" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Class Registration</Link>
-                <div className="dropdown-menu" aria-labelledby="dropdown07">
-                  <Link className="dropdown-item" to="/classes/cpr">CPR</Link>
-                  <Link className="dropdown-item"to="/classes/cprandfirstaid">CPR & First Aid</Link>
-                  <Link className="dropdown-item" to="/classes/groupcprclasses">Group CPR Classes</Link>
-                </div>
+              <li className="nav-item">
+                <Link className="nav-link" to="/classes/cprandfirstaid" >Class Registration </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/classes/groupcprclasses" >Group CPR Classes </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/about">About </Link>
